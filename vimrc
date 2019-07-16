@@ -14,10 +14,23 @@ autocmd FileType html       setlocal shiftwidth=2 tabstop=2
 
 
 """""""""""""""""""""""""""Remappings:""""""""""""""""""""""""""
-"html template
+"Skeletons
 nnoremap ;html :-1read ~/.vim/personalMappings/skeleton.html<CR>3jwf>a
-nnoremap ;setup :20vs . <CR> <C-W>w<esc>u  "Creates a directory window on the left
-inoremap <C-e> <C-x>
+
+"Window Setups
+nnoremap ;setup :20vs . <CR> <C-W>w<esc>u  	"Creates a directory window on the left
+
+"Not sure what to call this
+inoremap <C-e> <C-x> 						"save my fingers
+
+nnoremap ;check :set spell!<CR>				"toggle spellcheck 
+nnoremap nl ]s								"next mispelled  word
+nnoremap ns	[s								"previous mispelled word
+nnoremap nn z=								"show reccomendations
+											"Some Copy Paste stuff,  Requres gvim installed because gvim uses the + register as the global clipboard
+vnoremap <C-c> "*y   :let @+=@*<CR> 
+nnoremap <C-v> "+p
+inoremap <C-v> <esc>"+pA
 
 """""""""""""""""""""""" Vim-Plug"""""""""""""""""""""""""""""" 
 "PlugStatus to check installed plugins
