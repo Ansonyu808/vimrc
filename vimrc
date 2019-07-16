@@ -16,7 +16,8 @@ autocmd FileType html       setlocal shiftwidth=2 tabstop=2
 """""""""""""""""""""""""""Remappings:""""""""""""""""""""""""""
 "html template
 nnoremap ;html :-1read ~/.vim/personalMappings/skeleton.html<CR>3jwf>a
-
+nnoremap ;setup :20vs . <CR> <C-W>w<esc>u  "Creates a directory window on the left
+inoremap <C-e> <C-x>
 
 """""""""""""""""""""""" Vim-Plug"""""""""""""""""""""""""""""" 
 "PlugStatus to check installed plugins
@@ -32,10 +33,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-
-
-
-"Plugings:
+"Plugins:
 call plug#begin('~/.vim/plugged')
     Plug 'pangloss/vim-javascript'	"Visual JS Plugin
     Plug 'mxw/vim-jsx'				"Visual JSX Plugin
