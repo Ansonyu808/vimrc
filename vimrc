@@ -18,19 +18,20 @@ autocmd FileType html       setlocal shiftwidth=2 tabstop=2
 nnoremap ;html :-1read ~/.vim/personalMappings/skeleton.html<CR>3jwf>a
 
 "Window Setups
-nnoremap ;setup :20vs . <CR> <C-W>w<esc>u  	"Creates a directory window on the left
+	
+nnoremap ;setup :20vs . <CR> <C-W>w|		"Creates a directory window on the left
 
-"Not sure what to call this
-inoremap <C-e> <C-x> 						"save my fingers
+inoremap <C-e> <C-x>|						"Not sure what to call this "save my fingers	
+	
 
-nnoremap ;check :set spell!<CR>				"toggle spellcheck 
-nnoremap nl ]s								"next mispelled  word
-nnoremap ns	[s								"previous mispelled word
-nnoremap nn z=								"show reccomendations
-											"Some Copy Paste stuff,  Requres gvim installed because gvim uses the + register as the global clipboard
-vnoremap <C-c> "*y   :let @+=@*<CR> 
-nnoremap <C-v> "+p
-inoremap <C-v> <esc>"+pA
+nnoremap ;check :set spell!<CR>|			"toggle spellcheck 
+nnoremap nl ]s|								"next mispelled  word
+nnoremap ns	[s|								"previous mispelled word
+nnoremap nn z=|								"show reccomendations
+											"Some Copy Paste stuff,  Requires gvim installed because gvim uses the + register as the global clipboard
+vnoremap <C-C> "*y   :let @+=@*<CR> 
+nnoremap <C-V> "+p
+inoremap <C-V> <esc>"+pA
 
 """""""""""""""""""""""" Vim-Plug"""""""""""""""""""""""""""""" 
 "PlugStatus to check installed plugins
