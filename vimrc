@@ -40,8 +40,8 @@ nnoremap ns	[s|								"previous mispelled word
 nnoremap nn z=|								"show reccomendations
 											"Some Copy Paste stuff,  Requires gvim installed because gvim uses the + register as the global clipboard
 vnoremap <C-C> "*y   :let @+=@*<CR> 
-nnoremap <C-V> "+p
-inoremap <C-V> <esc>"+pA
+nnoremap <C-P> "+p
+inoremap <C-P> <esc>"+pA
 
 """""""""""""""""""""""" Vim-Plug"""""""""""""""""""""""""""""" 
 "PlugStatus to check installed plugins
@@ -63,6 +63,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'mxw/vim-jsx'				"Visual JSX Plugin
 	Plug 'jiangmiao/auto-pairs'		"Closes Brackets and Parentheses
 	Plug 'mattn/emmet-vim'			"Creates html style open and close tags
+	Plug 'tpope/vim-surround'		"chang surronding quotes or brackets
 call plug#end()
 
 "Emmet Override
