@@ -16,6 +16,16 @@ autocmd FileType html       setlocal shiftwidth=2 tabstop=2
 """""""""""""""""""""""""""Remappings:""""""""""""""""""""""""""
 "Skeletons
 nnoremap ;html :-1read ~/.vim/personalMappings/skeleton.html<CR>3jwf>a
+nnoremap ;imrc :-1read ~/.vim/personalMappings/import-react-component<CR>A<CR><ESC>
+
+function s:InputName()
+    call inputsave()
+    let g:name = input("Class Name: ")
+    call inputrestore()
+endfunction
+nnoremap ;rcc iclass <C-\><C-o>:call <SID>InputName()<CR><C-r>=name<CR><CR><ESC>:-read ~/.vim/personalMappings/react-class-component<ESC>hi<BS><ESC>bdwPLk$pxa;<ESC>H
+
+inoremap ;af <ESC>:read ~/.vim/personalMappings/arrow-function<CR>i<BS><BS><ESC>j
 
 "Window Setups
 	
